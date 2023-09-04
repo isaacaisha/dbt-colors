@@ -1,0 +1,282 @@
+body {
+    /*background-image: url('../images/logo1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color: #AEFAFC;
+    color: #4044E6;
+    font-family: 'Cardo';
+    padding: 0.5rem;
+    text-align: center;
+}
+/*
+.large-image {
+    width: 100%;
+    max-width: 600px;
+}
+*/
+h1 {
+    background-color: #fff;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #9126E8;
+    font-family: 'Cardo';
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+span {
+    color: #9126E8;
+    text-decoration: underline;
+}
+.jumbotron {
+  animation: color-change 10s linear infinite;
+  background-color: #47FFAC;
+  border: 0.1rem solid #1295FA;
+  margin: 0;
+}
+
+@keyframes color-change {
+  25% {
+    background-color: #FC5378;
+  }
+
+  50% {
+    background-color: #4044E6;
+  }
+
+  100% {
+    background-color: #47FFAC;
+  }
+}
+
+.palette {
+    background-color: #fff;
+    border: 0.1rem solid #1295FA;
+    border-radius: 1rem;
+    padding: 0.5rem 1.3rem;
+}
+
+.col {
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+}
+
+.bright_lilac  {
+    background-color: #cd84f1;
+    height: 5rem;
+    width: 5rem;
+}
+
+.pretty_please  {
+    background-color: #ffcccc;
+    height: 5rem;
+    width: 5rem;
+}
+
+.light_red  {
+    background-color: red;
+    height: 5rem;
+    width: 5rem;
+}
+
+.mandarin_sorbet  {
+    background-color: #ffaf40;
+    height: 5rem;
+    width: 5rem;
+}
+
+.unmellow_yellow  {
+    background-color: #fffa65;
+    height: 5rem;
+    width: 5rem;
+}
+
+.light_purple  {
+    background-color: #c56cf0;
+    height: 5rem;
+    width: 5rem;
+}
+
+.young_salmon  {
+    background-color: #ffb8b8;
+    height: 5rem;
+    width: 5rem;
+}
+
+.red_orange  {
+    background-color: #ff3838;
+    height: 5rem;
+    width: 5rem;
+}
+
+.radiant_yellow  {
+    background-color: #ff9f1a;
+    height: 5rem;
+    width: 5rem;
+}
+
+.dorn_yellow  {
+    background-color: #fff200;
+    height: 5rem;
+    width: 5rem;
+}
+
+.wintergreen  {
+    background-color: #32ff7e;
+    height: 5rem;
+    width: 5rem;
+}
+
+.electric_blue  {
+    background-color: #7efff5;
+    height: 5rem;
+    width: 5rem;
+}
+
+.neon_blue  {
+    background-color: #18dcff;
+    height: 5rem;
+    width: 5rem;
+}
+
+.light_slate_blue  {
+    background-color: #7d5fff;
+    height: 5rem;
+    width: 5rem;
+}
+
+.shadowed_steel  {
+    background-color: #4b4b4b;
+    height: 5rem;
+    width: 5rem;
+}
+
+.weird_green  {
+    background-color: #3ae374;
+    height: 5rem;
+    width: 5rem;
+}
+
+.hammam_blue  {
+    background-color: #67e6dc;
+    height: 5rem;
+    width: 5rem;
+}
+
+.spiro_disco_ball  {
+    background-color: #17c0eb;
+    height: 5rem;
+    width: 5rem;
+}
+
+.light_indigo  {
+    background-color: #7158e2;
+    height: 5rem;
+    width: 5rem;
+}
+
+.baltic_sea  {
+    background-color: #3d3d3d;
+    height: 5rem;
+    width: 5rem;
+}
+
+.color-box {
+    position: relative;
+}
+
+.copied-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: #32ff7e;
+}
+
+.alert {
+    color: #ff0000;
+}
+
+img {
+    border: 0.1rem solid #fff;
+    border-radius: 0.5rem;
+    max-width: 100%;
+    height: auto;
+}
+
+div .first-pane {
+    align-items: center;
+    color:  #cd84f1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+/* Override conflicting styles for the chosen image */
+.container .first-pane img.chosen-image {
+    max-width: none; /* Remove the maximum width to allow the image to expand */
+    width: 100%; /* Set the width to 100% to make the image fill the container */
+    height: auto; /* Automatically adjust the height to maintain the aspect ratio */
+    border: 1px solid white; /* Optional: Add a border to make the image stand out */
+    padding: 1rem;
+}
+
+.table {
+    margin: 0;
+}
+
+th.hexadecimal, th.hexadecimal_color {
+    color: #cd84f1;
+}
+
+.created_by, a {
+    font-size: 0.9rem;
+    text-decoration: None
+}
+
+hr {
+    margin: 0 auto 1rem;
+    width: 73%;
+}
+
+#footer {
+    text-align: center;
+}
+
+.fa-inverse {
+    background-color: #9126E8;
+    border: 0.1rem solid #AEFAFC;
+    border-radius: 55%;
+    color: #fff;
+}
+
+.fa-inverse:hover {
+    color: #6ABFA6;
+    width: 3.7rem;
+}
+
+.fas {
+    color: transparent !important;
+}
+
+.copyright {
+    background-color: #fff;
+    border: 0.1rem solid #1295FA;
+    border-radius: 0.5rem;
+    color: #9A30F3;
+    font-size: 0.9rem;
+    padding: 0.3rem;
+    text-decoration: None
+}
+# --------------------------------------------------- 🔥👌🏿💚😇❤️🔥 ---------------------------------------------------#
+
+# --------------------------------------------------- 🔥👌🏿💚😇❤️🔥 ---------------------------------------------------#

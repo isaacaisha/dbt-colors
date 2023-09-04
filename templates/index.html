@@ -1,0 +1,103 @@
+{% extends 'header.html' %}
+
+{% block title %} Welcom€ to{% endblock %}
+
+{% block head %}
+    {{ super() }}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='assets/images/favicon5.ico') }}">
+{% endblock %}
+
+{% block content %}
+
+<div class="">
+   <h3>Click on the Desired Color<br>to get the <span>Hexadecimal</span> Code<br>Copied to the Clipboard.<br>👇🏿😝👇🏿</h3>
+</div>
+
+<div class="p-2 rounded-3 jumbotron">
+    <div class="container-fluid py-2">
+        <div class="palette">
+            <div class="row">
+                <div class="col bright_lilac color-box"></div>
+                <div class="col pretty_please color-box"></div>
+                <div class="col light_red color-box"></div>
+                <div class="col mandarin_sorbet color-box"></div>
+                <div class="col unmellow_yellow color-box"></div>
+            </div>
+            <div class="row">
+                <div class="col light_purple color-box"></div>
+                <div class="col young_salmon color-box"></div>
+                <div class="col red_orange color-box"></div>
+                <div class="col radiant_yellow color-box"></div>
+                <div class="col dorn_yellow color-box"></div>
+            </div>
+            <div class="row">
+                <div class="col wintergreen color-box"></div>
+                <div class="col electric_blue color-box"></div>
+                <div class="col neon_blue color-box"></div>
+                <div class="col light_slate_blue color-box"></div>
+                <div class="col shadowed_steel color-box"></div>
+            </div>
+            <div class="row">
+                <div class="col weird_green color-box"></div>
+                <div class="col hammam_blue color-box"></div>
+                <div class="col spiro_disco_ball color-box"></div>
+                <div class="col light_indigo color-box"></div>
+                <div class="col baltic_sea color-box"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mb-3" style="color:#9126E8;">🇹🇷 Turkish Palette 🇹🇷</div>
+
+<hr>
+
+
+<div class=""><h3>Image Color Extract</h3></div>
+{% if error_message %}
+    <div class="alert alert-danger" role="alert">
+        {{ error_message }}
+    </div>
+    <p>🤣😭😂<br>👇🏿</p>
+{% endif %}
+<div class="mb-3 text-center first-pane">
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="fileUpload">Select an Image:</label>
+        <input type="file" class="form-control-file" id="fileUpload" name="file">
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg">Upload</button>
+</form>
+</div>
+
+<!-- Display the uploaded image if it exists -->
+{% if uploaded_image %}
+    <div class="p-2 rounded-3 jumbotron mb-5">
+        <div class="container-fluid py-2">
+            <img src="{{ url_for('uploaded_file', filename=uploaded_image) }}" alt="Uploaded Image">
+        </div>
+    </div>
+    <h5>The top 10 most common colors in that image:</h5>
+    <div class="p-2 rounded-3 jumbotron mb-5">
+        <div class="container-fluid py-2">
+            <table class="table table-striped-columns">
+                <tr>
+                    <th class="hexadecimal">Hexadecimal Color Code:</th>
+                    <th class="hexadecimal_color">Color</th>
+                </tr>
+                {% for color in top_10_colors %}
+                <tr>
+                    <td class="hexadecimal">{{ color }}</td>
+                    <td class="color-box" style="background-color: {{ color }};"></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endif %}
+
+<div class="mb-3"><span class="created_by">Created by: <a href="#">DBT Medusa</a> at <a href="#">My World</a></span></div>
+
+<hr>
+{% endblock %}
+
+{% block footer %} {% endblock %}
